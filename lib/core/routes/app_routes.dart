@@ -3,7 +3,9 @@ import 'package:go_router/go_router.dart';
 import 'package:message_app/core/routes/routes.dart';
 import 'package:message_app/features/auth/screens/login_screen.dart';
 import 'package:message_app/features/auth/screens/signup_screen.dart';
-import 'package:message_app/features/home/screens/home_screen.dart';
+
+import 'package:message_app/features/navbar/screens/bottom_nav.dart';
+import 'package:message_app/features/user/screens/user_screen.dart';
 
 class AppRoutes {
   // The route configuration
@@ -24,7 +26,13 @@ class AppRoutes {
           GoRoute(
             path: Routes.home,
             builder: (BuildContext context, GoRouterState state) {
-              return HomeScreen();
+              return BottomNav();
+            },
+          ),
+          GoRoute(
+            path: Routes.user,
+            builder: (BuildContext context, GoRouterState state) {
+              return UserScreen();
             },
           ),
         ],

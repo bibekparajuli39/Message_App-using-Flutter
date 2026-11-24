@@ -4,4 +4,5 @@ class Routes {
   static final signup = '/signup';
   static final forget = '/forget';
   static final home = '/home';
+  static final user = '/user';
 }
