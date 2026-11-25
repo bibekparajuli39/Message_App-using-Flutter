@@ -64,7 +64,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '418460642242',
     projectId: 'chatapp-7922b',
     storageBucket: 'chatapp-7922b.firebasestorage.app',
-    iosClientId: '418460642242-2n984390bhbo17res05ndskk23jn0kgn.apps.googleusercontent.com',
+    iosClientId:
+        '418460642242-2n984390bhbo17res05ndskk23jn0kgn.apps.googleusercontent.com',
     iosBundleId: 'com.example.messageApp',
   );
 
@@ -74,7 +75,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '418460642242',
     projectId: 'chatapp-7922b',
     storageBucket: 'chatapp-7922b.firebasestorage.app',
-    iosClientId: '418460642242-2n984390bhbo17res05ndskk23jn0kgn.apps.googleusercontent.com',
+    iosClientId:
+        '418460642242-2n984390bhbo17res05ndskk23jn0kgn.apps.googleusercontent.com',
     iosBundleId: 'com.example.messageApp',
   );
 

@@ -16,6 +16,14 @@ class AuthAuthenticate extends AuthState {
   AuthAuthenticate({required this.user});
 }
 
-class AuthLogut extends AuthState {}
+class AuthLogout extends AuthState {}
+
+// forget password
+class PasswordResetLoading extends AuthState {}
 
 class PasswordResetSuccess extends AuthState {}
+
+class PasswordResetError extends AuthState {
+  final String message;
+  PasswordResetError({required this.message});
+}

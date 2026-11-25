@@ -29,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
+    // final width = MediaQuery.of(context).size.width;
 
     return Scaffold(
       body: SizedBox(
@@ -175,7 +175,9 @@ class _LoginScreenState extends State<LoginScreen> {
                             Align(
                               alignment: Alignment.centerRight,
                               child: InkWell(
-                                onTap: () {},
+                                onTap: () {
+                                  context.go(Routes.forget);
+                                },
                                 child: Text('Forgot Password?'),
                               ),
                             ),

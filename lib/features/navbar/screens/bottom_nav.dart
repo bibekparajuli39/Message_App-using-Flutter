@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:message_app/features/users/screens/users_screen.dart';
 import 'package:message_app/features/chats/screens/chat_screen.dart';
-import 'package:message_app/features/home/screens/home_screen.dart';
 import 'package:message_app/features/profile/screens/profile_screen.dart';
 
 class BottomNav extends StatefulWidget {
@@ -12,7 +12,7 @@ class BottomNav extends StatefulWidget {
 
 class _BottomNavState extends State<BottomNav> {
   int currentIndex = 0;
-  final List pages = [HomeScreen(), ChatScreen(), ProfileScreen()];
+  final List pages = [ChatScreen(), UserScreen(), ProfileScreen()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(

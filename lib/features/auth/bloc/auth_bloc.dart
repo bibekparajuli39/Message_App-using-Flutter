@@ -63,16 +63,28 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       }
     });
     on<EmailForget>((event, emit) async {
-      emit(AuthLoading());
+      emit(PasswordResetLoading());
       try {
         await repository.forget(event.email);
         emit(PasswordResetSuccess());
       } on FirebaseAuthException catch (e) {
-        emit(AuthError(e.message ?? 'Something went wrong'));
+        emit(PasswordResetError(message: e.message ?? 'Something went wrong'));
       } catch (e) {
         debugPrint(e.toString());
       }
     });
-    on((event, emit) {});
+    on<EmailLogout>((event, emit) async {
+      emit(AuthLoading());
+      debugPrint('Logout: Loading');
+      try {
+        await repository.emailLogout();
+        debugPrint('Logout: Firebase signOut successful');
+        emit(AuthLogout());
+      } catch (e) {
+        emit(AuthError("$e"));
+
+        debugPrint('Logout Error: $e');
+      }
+    });
   }
 }

@@ -22,3 +22,5 @@ class EmailForget extends AuthEvent {
   final String email;
   EmailForget({required this.email});
 }
+
+class EmailLogout extends AuthEvent {}

@@ -201,19 +201,17 @@ class _SignupScreenState extends State<SignupScreen> {
 
                             Center(
                               child: Buttom(
-                                onTap: state is AuthLoading
-                                    ? () {}
-                                    : () {
-                                        context.read<AuthBloc>().add(
-                                          EmailSignUp(
-                                            name: nameController.text.trim(),
-                                            email: emailController.text.trim(),
-                                            password: passwordController.text
-                                                .trim(),
-                                          ),
-                                        );
-                                      },
+                                onTap: () {
+                                  context.read<AuthBloc>().add(
+                                    EmailSignUp(
+                                      name: nameController.text.trim(),
+                                      email: emailController.text.trim(),
+                                      password: passwordController.text.trim(),
+                                    ),
+                                  );
+                                },
                                 text: 'Sign Up',
+                                isLoading: state is AuthLoading,
                               ),
                             ),
 

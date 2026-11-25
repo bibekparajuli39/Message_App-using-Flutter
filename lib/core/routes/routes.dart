@@ -3,6 +3,6 @@ class Routes {
   static final login = '/';
   static final signup = '/signup';
   static final forget = '/forget';
-  static final home = '/home';
+  static final home = '/chat';
   static final user = '/user';
 }

@@ -56,4 +56,9 @@ class AuthRepository {
   Future<void> forget(String email) async {
     return await auth.sendPasswordResetEmail(email: email);
   }
+
+  // Email Logout
+  Future<void> emailLogout() async {
+    await auth.signOut();
+  }
 }
